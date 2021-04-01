@@ -8,7 +8,7 @@ class SR74HC595
   private:
 	uint8_t clkpin=0; 		//74HC595 clock pin
 	uint8_t datapin=0; 		//74HC595 data pin
-	uint8_t latchpin=0; 	//74HC595 latch pin
+	uint8_t latchpin=0; 		//74HC595 latch pin
 	uint8_t dataRegister=0;
 	
 	void initializePins();
@@ -18,9 +18,7 @@ class SR74HC595
 
   public:
 
-  	SR74HC595(uint8_t _Data,uint8_t _Clk, uint8_t _Latch);
- 	
- 	//Methods for sms 
+  	SR74HC595(uint8_t _Data,uint8_t _Clk, uint8_t _Latch); 
 	void sendToShiftRegister(uint8_t*,uint8_t srNos);
 	void sendToShiftRegister(uint8_t data);
 };
